@@ -6,7 +6,11 @@ function setup() {
 	height = windowHeight;
 	createCanvas(width, height);
 
-	grid = new Grid(3, 2);
+	grid = new Grid(1, 2);
+
+	for(let i = 0; i < grid.dim.width; i++) {
+		graph[graph.length] = new Graph(i, 1, null, null, 10, 5);
+	}
 }
 
 function draw() {
